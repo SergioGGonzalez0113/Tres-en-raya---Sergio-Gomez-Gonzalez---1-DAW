@@ -11,33 +11,7 @@ from ttt_core import (crear_tablero,
 
 
 def imprimir_tablero(tablero):
-    print("\n  0   1   2")
-    i = 0
-    while i < 3:
-        fila = ""
-        j = 0
-        while j < 3:
-            valor = tablero[i, j]
-
-            if valor == 0:
-                simbolo = " "
-            elif valor == 1:
-                simbolo = "X"
-            else:
-                simbolo = "O"
-
-            if j < 2:
-                fila = fila + simbolo + " | "
-            else:
-                fila = fila + simbolo
-
-            j = j + 1
-
-        print(f"{i} {fila}")
-
-        if i < 2:
-            print("  ---------")
-        i += 1
+    print(tablero)
 
 def pedir_movimiento_jugador(jugador):
     fila = int(input(f"Jugador {jugador} - Fila (0-2): "))
